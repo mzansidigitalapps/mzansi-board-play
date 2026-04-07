@@ -24,3 +24,9 @@ jobs:
           wget https://services.gradle.org/distributions/gradle-8.4-bin.zip
           unzip gradle-8.4-bin.zip
           ./gradle-8.4/bin/gradle :app:bundleRelease
+
+      - name: Upload AAB
+        uses: actions/upload-artifact@v4
+        with:
+          name: mzansi-board-play-aab
+          path: app/build/outputs/bundle/release/*.aab

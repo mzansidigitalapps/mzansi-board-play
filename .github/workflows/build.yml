@@ -18,8 +18,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Build AAB
-        run: |
-          wget https://services.gradle.org/distributions/gradle-8.4-bin.zip
-          unzip gradle-8.4-bin.zip
-          ./gradle-8.4/bin/gradle bundleRelease
+      - - name: Build AAB
+  run: |
+    wget https://services.gradle.org/distributions/gradle-8.4-bin.zip
+    unzip gradle-8.4-bin.zip
+    ./gradle-8.4/bin/gradle :app:bundleRelease

@@ -1,16 +1,5 @@
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.0'
-    }
-}
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
+- name: Build with Gradle
+  run: |
+    wget https://services.gradle.org/distributions/gradle-8.4-bin.zip
+    unzip gradle-8.4-bin.zip
+    ./gradle-8.4/bin/gradle bundleRelease

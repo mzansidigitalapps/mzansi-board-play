@@ -18,8 +18,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Grant execute permission
-        run: chmod +x gradlew
-
-      - name: Build AAB
-        run: ./gradlew bundleRelease
+      - name: Build AAB (No wrapper needed)
+        run: |
+          wget https://services.gradle.org/distributions/gradle-8.4-bin.zip
+          unzip gradle-8.4-bin.zip
+          ./gradle-8.4/bin/gradle bundleRelease
